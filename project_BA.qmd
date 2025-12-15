@@ -1,0 +1,48 @@
+---
+title: "Machine Learning for Business Analytics Cases"
+---
+
+## Project at a glance
+- Project date: Spring 2025
+
+- Research question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?
+
+- Methodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.
+
+- Output: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class' prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric. 
+
+- Relevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result.
+
+# Scope
+This project was a part of my Business Analytics class during my MSc. Economics at the Wirtschaftsuniversität Wien. We were tasked with predicting fraudulent claims at a health insurance company, and making a business report showing our research, method results and firm recommendations on a claims processing overhaul as an end product. The assignment contained little prior information, other than a few aggregate business metrics of our firm vs the competitors, and a dataset of 100,000 claims. 
+
+
+# Introduction
+I start my business report by outlining fraud and its financial implications in the healthcare sector. I calculate approximate cost of fraud to the firm, using insurer-specific metrics such as the fraud uplift. Then, I estimate savings of a claims processing overhaul that would improve fraud detection based on previous relevant research.
+
+# Patterns in Fraud  
+I conduct a targeted literature research to identify how healthcare fraud is orchestrated and which patterns it follows.
+
+# Feature Engineering
+Based partly on the patterns in fraud, I construct a list of features that do not exist in the data yet, but which I will create to predict fraudulent activity. While the dataset does not contain any individual or healthcare provider identifiers, I opt to create these and individual- and provider aggregate statistics to provide my models with additional predictive features.
+
+![Additional features created to improve predictive power](images/project_BA/feature_engineering_table.png)
+
+# Modeling
+I build models of varying complexity, starting with a simple single decision tree (CART) model, to an Optuna hyperparameter search gradient boosting model where I optimize the fraud prediction threshold for the prediction competition's evaluation metric (recall x precision). I call this model Optuna-LGBM for brevity.
+
+
+![Diagram outlining the modeling section](images/project_BA/methodology_diagram.png)
+
+![Model comparison](images/project_BA/model_comparison_table.png)
+
+# Output
+![Beeswarm plot of SHAP analysis](images/project_BA/SHAP_beeswarm.png)
+
+![](images/project_BA/prob_dist.png)
+
+# Cost-Benefit Analysis
+
+![](images/project_BA/cost_ben_dist.png)
+
+![](images/project_BA/cost_ben_simulation.png)

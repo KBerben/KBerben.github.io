@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  title: "Koen Berben"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cv.qmd
+        text: CV
+      - text: Projects
+        menu:
+          - href: project_BA.qmd
+            text: Machine Learning for Business Analytics Cases
+          - href: projects_webscraping_UN.qmd
+            text: Webscraping and Text Mining 
+  page-footer:
+    left: "© 2025 Koen Berben"
+    right:
+      - icon: github
+        href: https://github.com/KBerben
+      - icon: linkedin
+        href: https://linkedin.com/in/koenberben
+format:
+    html:
+      theme: cosmo
+      css: styles.css
