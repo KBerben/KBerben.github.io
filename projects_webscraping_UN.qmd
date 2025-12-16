@@ -1,3 +1,19 @@
 ---
-title: "Webscraping and Text Mining"
+title: "MSc (2025) - Webscraping and Text Mining"
 ---
+
+## Project at a glance
+- Project date: Fall 2025 (ongoing)
+
+- Research question: How do public threats in a diplomatic setting influence later sanctions?
+
+- Methodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats
+
+- Programs used: R (rvest, chromote, regex), Python, LaTeX
+
+- Output: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.
+
+- Relevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications. 
+
+# Scope
+This project is a part of the research & policy seminar in Data Science and Machine Learning, where we were given free choice in project topics. We chose UN data because it grants us an opportunity to make a structural, informative dataset out of webscraped text. 

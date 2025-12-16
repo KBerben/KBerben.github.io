@@ -7,7 +7,7 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: About Me
       - href: projects.qmd
         text: Projects
       - href: cv.qmd
@@ -19,3 +19,11 @@ format:
     css: styles.css
 
 ---
+
+
+<iframe
+  src="images/CV_English_Technical.pdf"
+  width="100%"
+  height="1100px"
+  style="border: none;">
+</iframe>

@@ -1,10 +1,11 @@
 ---
-title: "Welcome"
+title: "About Me"
 ---
 
 
-## About me
+I am a graduate economics student with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis. Applying data, evidence-based assumptions and dilligent analysis to find targeted business solutions is one of my core strengths. 
 
-I am a graduate economics student, with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis. 
+Feel free to look through some of my previous projects and contact me if you have any questions. 
 
-Feel free to look through my previous projects and contact me if you have any questions. 
+
+![](images/Photo_Koen.jpg){width=40%}

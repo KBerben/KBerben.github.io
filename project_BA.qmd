@@ -1,13 +1,15 @@
 ---
-title: "Machine Learning for Business Analytics Cases"
+title: "MSc (2025) - Machine Learning for Business Analytics"
 ---
 
 ## Project at a glance
-- Project date: Spring 2025
+- Project date: Spring 2025 (grade: 100/100 points)
 
 - Research question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?
 
 - Methodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.
+
+- Programs used: Python, LaTeX
 
 - Output: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class' prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric. 
 
@@ -29,20 +31,34 @@ Based partly on the patterns in fraud, I construct a list of features that do no
 ![Additional features created to improve predictive power](images/project_BA/feature_engineering_table.png)
 
 # Modeling
-I build models of varying complexity, starting with a simple single decision tree (CART) model, to an Optuna hyperparameter search gradient boosting model where I optimize the fraud prediction threshold for the prediction competition's evaluation metric (recall x precision). I call this model Optuna-LGBM for brevity.
-
-
 ![Diagram outlining the modeling section](images/project_BA/methodology_diagram.png)
 
+I build models of varying complexity, starting with a simple single decision tree (CART) model, to an Optuna hyperparameter search gradient boosting model where I optimize the fraud prediction threshold for the prediction competition's business evaluation metric (recall x precision). I call this model Optuna-LGBM-BIZ for brevity. It is constructed as follows:
+1. I define an objective function which uses Optuna to semi-randomly search over gradient booster hyperparameter space to find the optimal set of LGBM parameters to maximize the business metric over 30 trials. each trial containing a 5-fold cross-validation type LGBM with different sets of parameters.
+2. I take the best performing set of hyperparameters to fit the LGBM on the full training dataset in a 5-fold cross-validation setting, whereafter I find the mean optimal threshold for predicting fraud, which maximizes the business score again.
+3. A feature analysis tells me which information is relatively important in predicting fraud. Based on this, I engineer more features or specific interactions between features, marginally improving predictive power.
+4. I run the model on the test data and compare its outcomes with the less complicated models.
+
 ![Model comparison](images/project_BA/model_comparison_table.png)
+
+Note that the ROC-AUC metric is only 0.55, which means that the models perform only slightly better than guessing fraud. The only marginal increases in predictive power when increasing model complexity is a sign that feature engineering and patterns in fraud are the bottleneck in this case. The following plots illustrate this:
 
 # Output
 ![Beeswarm plot of SHAP analysis](images/project_BA/SHAP_beeswarm.png)
 
-![](images/project_BA/prob_dist.png)
+![Probability distribution of model's fraud predictions](images/project_BA/prob_dist.png)
+
+As can be seen above, it is hard to separate fraudulent from non-fraudulent claims. The best that this model can do is give an indication of which claims to further investigate for fraud. 
 
 # Cost-Benefit Analysis
-
+I categorize my model's predicted fraud based on probability bins, whereafter I calculate how much the real fraudulent claims per bin have cost the firm using the dataset. Then, I estimate the investigation cost per bin, using literature-backed estimates. I show that the benefit of investigating fraud depends on how sure the model is that a claim is fraudulent, how much the average fraudulent claim can be saved and how high the investigation costs are for investigating every claim in that probability bin.
 ![](images/project_BA/cost_ben_dist.png)
 
+Next, I theorize that investigation costs are not linear, and that they are small while investigating the first 1000-1500 cases, they grow exponentially above that number due to processing constraints. Fitting to a business report, I then estimate the maximum net savings for the business given the current assumptions.
+
 ![](images/project_BA/cost_ben_simulation.png)
+
+To conclude my research, I give targeted recommendations for improving the claims processing and which claims to investigate for maximum estimated net savings. Lastly, I compare the total estimated savings with the literature and find that they align well. 
+
+
+The full business report is available upon request. 
