@@ -2,29 +2,50 @@
   {
     "objectID": "project_BA.html",
     "href": "project_BA.html",
-    "title": "Machine Learning for Business Analytics Cases",
+    "title": "MSc (2025) - Machine Learning for Business Analytics",
     "section": "",
-    "text": "Project date: Spring 2025\nResearch question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?\nMethodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.\nOutput: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class’ prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric.\nRelevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result."
+    "text": "Project date: Spring 2025 (grade: 100/100 points)\nResearch question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?\nMethodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.\nPrograms used: Python, LaTeX\nOutput: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class’ prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric.\nRelevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result."
   },
   {
     "objectID": "project_BA.html#project-at-a-glance",
     "href": "project_BA.html#project-at-a-glance",
-    "title": "Machine Learning for Business Analytics Cases",
+    "title": "MSc (2025) - Machine Learning for Business Analytics",
     "section": "",
-    "text": "Project date: Spring 2025\nResearch question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?\nMethodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.\nOutput: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class’ prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric.\nRelevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result."
+    "text": "Project date: Spring 2025 (grade: 100/100 points)\nResearch question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?\nMethodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.\nPrograms used: Python, LaTeX\nOutput: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class’ prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric.\nRelevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result."
+  },
+  {
+    "objectID": "projects_BSc_thesis.html",
+    "href": "projects_BSc_thesis.html",
+    "title": "BSc thesis (2022) - Webscraping and Sentiment Analysis",
+    "section": "",
+    "text": "Project date: Spring 2022 (grade: 8.5 out of 10)\nResearch question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?\nMethodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis\nPrograms used: Python, Stata\nOutput: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.\nRelevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator)."
+  },
+  {
+    "objectID": "projects_BSc_thesis.html#project-at-a-glance",
+    "href": "projects_BSc_thesis.html#project-at-a-glance",
+    "title": "BSc thesis (2022) - Webscraping and Sentiment Analysis",
+    "section": "",
+    "text": "Project date: Spring 2022 (grade: 8.5 out of 10)\nResearch question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?\nMethodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis\nPrograms used: Python, Stata\nOutput: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.\nRelevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator)."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome",
+    "title": "About Me",
     "section": "",
-    "text": "I am a graduate economics student, with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis.\nFeel free to look through my previous projects and contact me if you have any questions."
+    "text": "I am a graduate economics student with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis. Applying data, evidence-based assumptions and dilligent analysis to find targeted business solutions is one of my core strengths.\nFeel free to look through some of my previous projects and contact me if you have any questions."
   },
   {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Welcome",
+    "objectID": "projects_webscraping_UN.html",
+    "href": "projects_webscraping_UN.html",
+    "title": "MSc (2025) - Webscraping and Text Mining",
     "section": "",
-    "text": "I am a graduate economics student, with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis.\nFeel free to look through my previous projects and contact me if you have any questions."
+    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+  },
+  {
+    "objectID": "projects_webscraping_UN.html#project-at-a-glance",
+    "href": "projects_webscraping_UN.html#project-at-a-glance",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "",
+    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
   }
 ]

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.8.26" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>cv – Koen Berben</title>
+<title>BSc thesis (2022) - Webscraping and Sentiment Analysis – Koen Berben</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +22,25 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -54,51 +70,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="/index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Koen Berben</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-  aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"
-  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="/index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/cv.html"> 
+    <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Projects</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="/projects_BSc_thesis.html">
+    <a class="dropdown-item" href="./projects_BSc_thesis.html">
  <span class="dropdown-text">BSc thesis (2022) - Webscraping and Sentiment Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="/project_BA.html">
+    <a class="dropdown-item" href="./project_BA.html">
  <span class="dropdown-text">MSc (2025) - Machine Learning for Business Analytics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="/projects_webscraping_UN.html">
+    <a class="dropdown-item" href="./projects_webscraping_UN.html">
  <span class="dropdown-text">MSc (2025) - Webscraping and Text Mining</span></a>
   </li>  
     </ul>
@@ -114,29 +128,45 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">BSc thesis (2022) - Webscraping and Sentiment Analysis</h1>
+</div>
 
 
 
-<iframe src="images/CV_English_Technical.pdf" width="100%" height="1100px" style="border: none;">
-</iframe>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">Koen Berben</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Koen Berben</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6SG9tZQ==">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw=">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q1Y=">CV</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2N2Lmh0bWw=">/cv.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UHJvamVjdHM=">Projects</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QlNjIHRoZXNpcyAoMjAyMikgLSBXZWJzY3JhcGluZyBhbmQgU2VudGltZW50IEFuYWx5c2lz">BSc thesis (2022) - Webscraping and Sentiment Analysis</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Byb2plY3RzX0JTY190aGVzaXMuaHRtbA==">/projects_BSc_thesis.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TVNjICgyMDI1KSAtIE1hY2hpbmUgTGVhcm5pbmcgZm9yIEJ1c2luZXNzIEFuYWx5dGljcw==">MSc (2025) - Machine Learning for Business Analytics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Byb2plY3RfQkEuaHRtbA==">/project_BA.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TVNjICgyMDI1KSAtIFdlYnNjcmFwaW5nIGFuZCBUZXh0IE1pbmluZw==">MSc (2025) - Webscraping and Text Mining</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Byb2plY3RzX3dlYnNjcmFwaW5nX1VOLmh0bWw=">/projects_webscraping_UN.html</span></p>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLWxlZnQ=">
-<p>© 2025 Koen Berben</p>
-</div>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Koen Berben</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Koen Berben</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Koen Berben</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">Koen Berben</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"></span></p>
-</div>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="project-at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="project-at-a-glance">Project at a glance</h2>
+<ul>
+<li><p>Project date: Spring 2022 (grade: 8.5 out of 10)</p></li>
+<li><p>Research question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?</p></li>
+<li><p>Methodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis</p></li>
+<li><p>Programs used: Python, Stata</p></li>
+<li><p>Output: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.</p></li>
+<li><p>Relevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator).</p></li>
+</ul>
+
+
+</section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -540,8 +570,8 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      <div class='footer-contents'>© 2025 Koen Berben</div>  
-    </div>   
+<p>© 2025 Koen Berben</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
@@ -549,19 +579,13 @@ ul.task-list li input[type="checkbox"] {
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/KBerben">
-      <i 
-  class="bi bi-github" 
-  role="img" 
->
+      <i class="bi bi-github" role="img">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://linkedin.com/in/koenberben">
-      <i 
-  class="bi bi-linkedin" 
-  role="img" 
->
+      <i class="bi bi-linkedin" role="img">
 </i> 
     </a>
   </li>  
@@ -570,6 +594,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </footer>
 
-</body>
 
-</html>
+
+
+</body></html>
