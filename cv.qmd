@@ -4,6 +4,9 @@ project:
 
 website:
   title: "Koen Berben"
+  subtitle: "A Passion for Economics"
+  page-layout: full
+  toc: false
   navbar:
     left:
       - href: index.qmd
@@ -12,18 +15,104 @@ website:
         text: Projects
       - href: cv.qmd
         text: CV
-
 format:
   html:
     theme: cosmo
     css: styles.css
+---
+
+## Contact
+
+- **Location:** Vienna, Austria  
+- **Email:** [koenberben7@gmail.com](mailto:koenberben7@gmail.com)  
+- **LinkedIn:** [linkedin.com/in/koenberben](https://linkedin.com/in/koenberben)
 
 ---
 
+## Personal Profile
 
-<iframe
-  src="images/CV_English_Technical.pdf"
-  width="100%"
-  height="1100px"
-  style="border: none;">
-</iframe>
+I am an analytical and technically skilled economics graduate approach everything with reason and a problem-solving perspective. With practical knowledge of businesses and organizations, I am able to apply my knowledge in theoretical discussions and translate ideas into practical applications.
+
+As a triathlete outside of my career, I bring my discipline, perseverance, and positive mindset to both work and study.
+
+---
+
+## Education
+
+**Vienna University of Economics and Business Economics (MSc)**  
+Master Economics  
+2024 – now  
+Grade: 1.2  (Austrian grading system)
+
+**Erasmus Universiteit Rotterdam (BSc)**  
+Bachelor Economics & Business Economics  
+2019 – 2022  
+Grade: 8.1 (Dutch grading system)
+
+---
+
+## Skills
+
+- Proficient in statistical programs including Stata, R, and SPSS for data manipulation, analysis and econometrics.
+- Practical experience with Python (web scraping, data cleaning, data analytics, and machine learning models).
+- Practical programming knowledge in diverse languages such as HTML, CSS, RMarkdown, LaTeX.
+- Familiar with OCR workflows in combination with RegEx rules.
+- Functional knowledge of SQL and Power BI for (financial and management) reporting.
+- Curricular knowledge in accounting, microeconomics, macroeconomics, marketing, finance, econometrics, and game theory.
+- Practical understanding of accounting and management through work experience.
+- Strong skills in Microsoft Excel, Word, PowerPoint, and Power BI.
+- Fluent proficiency in Dutch and English, including possession of a Cambridge Advanced English (CAE) diploma, certified B1 German.
+
+## Work Experience
+
+### Arnold & Siedsma — Assistant Controller  
+JAN 2023 – JUL 2024
+
+
+- Held day-to-day operational responsibility for the Accounts Payable function, coordinating and supporting two financial (administrative) colleagues under supervision of the controller.
+- Processed and monitored the majority of incoming invoices and payments, communicated with suppliers on outstanding invoices. 
+- Built RegEx- and SQL-based workflows combining OCR invoice data with accounting and IP systems, enabling automatic pre-filling and real-time validation of case numbers and cost places.
+- Reduced manual invoice handling time for standard invoices by approximately 10–15 minutes per day in aggregate, while significantly improving detection of input errors and preventing time-consuming downstream errors.
+- Used Excel and financial database exports to create improved creditor overviews and monitoring tools, improving the overview of invoices sent by IP suppliers and decreasing payment delays.
+- Developed dynamic management reports using SQL and Power BI based on IP management and financial software. Including dashboards concerning outstanding payment per client and department, and client patent overviews. 
+
+---
+
+### Talent&Pro — Traineeship Client Due Diligence Analyst  
+AUG 2022 – NOV 2022
+
+- Worked in teams on deadline-driven projects in the landscape of "Know Your Customer".
+- Obtained the Wft Basis certificate for working in Dutch financial services sector.
+
+---
+
+### EUR-RoadRunners — Treasurer & numerous committees  
+JUN 2021 – JUL 2022
+
+- Was responsible for a student running association with 100+ active members, especially for budgets and accounting.
+- Web development (front- and back-end), financial auditing.
+- Communicated with relevant stakeholders, managed committees.
+- Organized running races with 400+ participants through Rotterdam.
+
+---
+
+## Relevant Projects
+
+### BSc Thesis: Consumer confidence and sentiment analysis  
+HANDED IN: JUL 2022  
+GRADE: 8.5 (Dutch grading system)
+
+- Scraped 300k tweets with Python (Snscrape).
+- Cleaned and analyzed sentiment of tweets in Python (Pandas, VADER).
+- Exported data to Stata to compute Consumer Sentiment indices.
+- For more information, see [my full description of the project](https://kberben.github.io/project_BSc_thesis.html).
+
+---
+
+### Business Analytics class — machine learning modeling  
+MAR 2025 – JUL 2025  
+GRADE: 1 (Austrian grading system)
+
+- Handled, cleaned and analyzed 100k observations of data, computed machine learning models in Python.
+- Won the class’s prediction competition through data engineering decisions and superior model performance.
+- For more information, see [my full description of the project](https://kberben.github.io/project_BA.html).

@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "project_webscraping_UN.html",
+    "href": "project_webscraping_UN.html",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "",
+    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+  },
+  {
+    "objectID": "project_webscraping_UN.html#project-at-a-glance",
+    "href": "project_webscraping_UN.html#project-at-a-glance",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "",
+    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+  },
+  {
+    "objectID": "project_business_patents.html",
+    "href": "project_business_patents.html",
+    "title": "2025-2026 - Business Intelligence report using Synthetic Patent Innovation Data",
+    "section": "",
+    "text": "Project date: Fall 2025 - Spring 2026 (ongoing)\nResearch question: Where is innovation activity concentrated? How does collaboration evolve over time? Which technology areas grow fastest? How concentrated vs. fragmented is innovation?\nMethodology: Synthetic data creation based on the PATSTAT database, translating relational databases into a comprehensive dataset and building insightful dashboards for relevant stakeholders to support business decisions.\nPrograms used: SQL (PATSTAT platform), Python, R, PowerBI, LaTeX\nOutput: Insightful PowerBI dashboards, actionable recommendations on the proposed research questions.\nRelevance:"
+  },
+  {
+    "objectID": "project_business_patents.html#project-at-a-glance",
+    "href": "project_business_patents.html#project-at-a-glance",
+    "title": "2025-2026 - Business Intelligence report using Synthetic Patent Innovation Data",
+    "section": "",
+    "text": "Project date: Fall 2025 - Spring 2026 (ongoing)\nResearch question: Where is innovation activity concentrated? How does collaboration evolve over time? Which technology areas grow fastest? How concentrated vs. fragmented is innovation?\nMethodology: Synthetic data creation based on the PATSTAT database, translating relational databases into a comprehensive dataset and building insightful dashboards for relevant stakeholders to support business decisions.\nPrograms used: SQL (PATSTAT platform), Python, R, PowerBI, LaTeX\nOutput: Insightful PowerBI dashboards, actionable recommendations on the proposed research questions.\nRelevance:"
+  },
+  {
     "objectID": "project_BA.html",
     "href": "project_BA.html",
     "title": "MSc (2025) - Machine Learning for Business Analytics",
@@ -14,18 +42,53 @@
     "text": "Project date: Spring 2025 (grade: 100/100 points)\nResearch question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?\nMethodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.\nPrograms used: Python, LaTeX\nOutput: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class’ prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric.\nRelevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result."
   },
   {
-    "objectID": "projects_BSc_thesis.html",
-    "href": "projects_BSc_thesis.html",
-    "title": "BSc thesis (2022) - Webscraping and Sentiment Analysis",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Koen Berben",
     "section": "",
-    "text": "Project date: Spring 2022 (grade: 8.5 out of 10)\nResearch question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?\nMethodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis\nPrograms used: Python, Stata\nOutput: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.\nRelevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator)."
+    "text": "Location: Vienna, Austria\n\nEmail: koenberben7@gmail.com\n\nLinkedIn: linkedin.com/in/koenberben"
   },
   {
-    "objectID": "projects_BSc_thesis.html#project-at-a-glance",
-    "href": "projects_BSc_thesis.html#project-at-a-glance",
-    "title": "BSc thesis (2022) - Webscraping and Sentiment Analysis",
+    "objectID": "cv.html#contact",
+    "href": "cv.html#contact",
+    "title": "Koen Berben",
     "section": "",
-    "text": "Project date: Spring 2022 (grade: 8.5 out of 10)\nResearch question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?\nMethodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis\nPrograms used: Python, Stata\nOutput: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.\nRelevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator)."
+    "text": "Location: Vienna, Austria\n\nEmail: koenberben7@gmail.com\n\nLinkedIn: linkedin.com/in/koenberben"
+  },
+  {
+    "objectID": "cv.html#personal-profile",
+    "href": "cv.html#personal-profile",
+    "title": "Koen Berben",
+    "section": "Personal Profile",
+    "text": "Personal Profile\nI am an analytical and technically skilled economics graduate approach everything with reason and a problem-solving perspective. With practical knowledge of businesses and organizations, I am able to apply my knowledge in theoretical discussions and translate ideas into practical applications.\nAs a triathlete outside of my career, I bring my discipline, perseverance, and positive mindset to both work and study."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Koen Berben",
+    "section": "Education",
+    "text": "Education\nVienna University of Economics and Business Economics (MSc)\nMaster Economics\n2024 – now\nGrade: 1.2 (Austrian grading system)\nErasmus Universiteit Rotterdam (BSc)\nBachelor Economics & Business Economics\n2019 – 2022\nGrade: 8.1 (Dutch grading system)"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Koen Berben",
+    "section": "Skills",
+    "text": "Skills\n\nProficient in statistical programs including Stata, R, and SPSS for data manipulation, analysis and econometrics.\nPractical experience with Python (web scraping, data cleaning, data analytics, and machine learning models).\nPractical programming knowledge in diverse languages such as HTML, CSS, RMarkdown, LaTeX.\nFamiliar with OCR workflows in combination with RegEx rules.\nFunctional knowledge of SQL and Power BI for (financial and management) reporting.\nCurricular knowledge in accounting, microeconomics, macroeconomics, marketing, finance, econometrics, and game theory.\nPractical understanding of accounting and management through work experience.\nStrong skills in Microsoft Excel, Word, PowerPoint, and Power BI.\nFluent proficiency in Dutch and English, including possession of a Cambridge Advanced English (CAE) diploma, certified B1 German."
+  },
+  {
+    "objectID": "cv.html#work-experience",
+    "href": "cv.html#work-experience",
+    "title": "Koen Berben",
+    "section": "Work Experience",
+    "text": "Work Experience\n\nArnold & Siedsma — Assistant Controller\nJAN 2023 – JUL 2024\n\nHeld day-to-day operational responsibility for the Accounts Payable function, coordinating and supporting two financial (administrative) colleagues under supervision of the controller.\nProcessed and monitored the majority of incoming invoices and payments, communicated with suppliers on outstanding invoices.\nBuilt RegEx- and SQL-based workflows combining OCR invoice data with accounting and IP systems, enabling automatic pre-filling and real-time validation of case numbers and cost places.\nReduced manual invoice handling time for standard invoices by approximately 10–15 minutes per day in aggregate, while significantly improving detection of input errors and preventing time-consuming downstream errors.\nUsed Excel and financial database exports to create improved creditor overviews and monitoring tools, improving the overview of invoices sent by IP suppliers and decreasing payment delays.\nDeveloped dynamic management reports using SQL and Power BI based on IP management and financial software. Including dashboards concerning outstanding payment per client and department, and client patent overviews.\n\n\n\n\nTalent&Pro — Traineeship Client Due Diligence Analyst\nAUG 2022 – NOV 2022\n\nWorked in teams on deadline-driven projects in the landscape of “Know Your Customer”.\nObtained the Wft Basis certificate for working in Dutch financial services sector.\n\n\n\n\nEUR-RoadRunners — Treasurer & numerous committees\nJUN 2021 – JUL 2022\n\nWas responsible for a student running association with 100+ active members, especially for budgets and accounting.\nWeb development (front- and back-end), financial auditing.\nCommunicated with relevant stakeholders, managed committees.\nOrganized running races with 400+ participants through Rotterdam."
+  },
+  {
+    "objectID": "cv.html#relevant-projects",
+    "href": "cv.html#relevant-projects",
+    "title": "Koen Berben",
+    "section": "Relevant Projects",
+    "text": "Relevant Projects\n\nBSc Thesis: Consumer confidence and sentiment analysis\nHANDED IN: JUL 2022\nGRADE: 8.5 (Dutch grading system)\n\nScraped 300k tweets with Python (Snscrape).\nCleaned and analyzed sentiment of tweets in Python (Pandas, VADER).\nExported data to Stata to compute Consumer Sentiment indices.\nFor more information, see my full description of the project.\n\n\n\n\nBusiness Analytics class — machine learning modeling\nMAR 2025 – JUL 2025\nGRADE: 1 (Austrian grading system)\n\nHandled, cleaned and analyzed 100k observations of data, computed machine learning models in Python.\nWon the class’s prediction competition through data engineering decisions and superior model performance.\nFor more information, see my full description of the project."
   },
   {
     "objectID": "index.html",
@@ -35,17 +98,31 @@
     "text": "I am a graduate economics student with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis. Applying data, evidence-based assumptions and dilligent analysis to find targeted business solutions is one of my core strengths.\nFeel free to look through some of my previous projects and contact me if you have any questions."
   },
   {
-    "objectID": "projects_webscraping_UN.html",
-    "href": "projects_webscraping_UN.html",
-    "title": "MSc (2025) - Webscraping and Text Mining",
+    "objectID": "project_BSc_thesis.html",
+    "href": "project_BSc_thesis.html",
+    "title": "BSc thesis (2022) - Webscraping and Sentiment Analysis",
     "section": "",
-    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+    "text": "Project date: Spring 2022 (grade: 8.5 out of 10)\nResearch question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?\nMethodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis\nPrograms used: Python, Stata\nOutput: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.\nRelevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator)."
   },
   {
-    "objectID": "projects_webscraping_UN.html#project-at-a-glance",
-    "href": "projects_webscraping_UN.html#project-at-a-glance",
-    "title": "MSc (2025) - Webscraping and Text Mining",
+    "objectID": "project_BSc_thesis.html#project-at-a-glance",
+    "href": "project_BSc_thesis.html#project-at-a-glance",
+    "title": "BSc thesis (2022) - Webscraping and Sentiment Analysis",
     "section": "",
-    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+    "text": "Project date: Spring 2022 (grade: 8.5 out of 10)\nResearch question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?\nMethodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis\nPrograms used: Python, Stata\nOutput: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants.\nRelevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator)."
+  },
+  {
+    "objectID": "project_MSc_thesis.html",
+    "href": "project_MSc_thesis.html",
+    "title": "MSc thesis (2025-2026) - Introduction of the Unitary Patent",
+    "section": "",
+    "text": "Project date: Fall 2025 - Spring 2026 (ongoing)\nResearch question: How is the introduction of the Unitary Patent shaping the patent industry, and do renewal and litigation outcomes between Unitary- and non-Unitary patents differ?\nMethodology: translating relational databases into a comprehensive dataset, using econometric methods such as matching to construct treatment and control groups and testing outcomes.\nPrograms used: SQL (PATSTAT platform), R, LaTeX\nOutput: MSc thesis\nRelevance: Conducting econometrically justifyable industry analysis, useful not only for economic research (policy evaluation of the Unitary Patent), but for business purposes as well (Unitary Patent characteristics, gaps in innovation, litigation outcomes likelihood)."
+  },
+  {
+    "objectID": "project_MSc_thesis.html#project-at-a-glance",
+    "href": "project_MSc_thesis.html#project-at-a-glance",
+    "title": "MSc thesis (2025-2026) - Introduction of the Unitary Patent",
+    "section": "",
+    "text": "Project date: Fall 2025 - Spring 2026 (ongoing)\nResearch question: How is the introduction of the Unitary Patent shaping the patent industry, and do renewal and litigation outcomes between Unitary- and non-Unitary patents differ?\nMethodology: translating relational databases into a comprehensive dataset, using econometric methods such as matching to construct treatment and control groups and testing outcomes.\nPrograms used: SQL (PATSTAT platform), R, LaTeX\nOutput: MSc thesis\nRelevance: Conducting econometrically justifyable industry analysis, useful not only for economic research (policy evaluation of the Unitary Patent), but for business purposes as well (Unitary Patent characteristics, gaps in innovation, litigation outcomes likelihood)."
   }
 ]

@@ -11,12 +11,17 @@ website:
         text: CV
       - text: Projects
         menu:
-          - href: projects_BSc_thesis.qmd
+          - href: project_BSc_thesis.qmd
             text: BSc thesis (2022) - Webscraping and Sentiment Analysis
           - href: project_BA.qmd
             text: MSc (2025) - Machine Learning for Business Analytics 
-          - href: projects_webscraping_UN.qmd
+          - href: project_webscraping_UN.qmd
             text: MSc (2025) - Webscraping and Text Mining
+          - href: project_MSc_thesis.qmd
+            text: MSc thesis (2025/2026) - Introduction of the Unitary Patent
+          - href: project_business_patents.qmd
+            text: (2025/2026) - Business Intelligence report using Synthetic Patent Innovation Data
+            
   page-footer:
     left: "© 2025 Koen Berben"
     right:

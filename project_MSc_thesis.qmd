@@ -1,0 +1,17 @@
+---
+title: "MSc thesis (2025-2026) - Introduction of the Unitary Patent"
+---
+
+## Project at a glance
+- Project date: Fall 2025 - Spring 2026 (ongoing)
+
+- Research question: How is the introduction of the Unitary Patent shaping the patent industry, and do renewal and litigation outcomes between Unitary- and non-Unitary patents differ?
+
+- Methodology: translating relational databases into a comprehensive dataset, using econometric methods such as matching to construct treatment and control groups and testing outcomes.
+
+- Programs used: SQL (PATSTAT platform), R, LaTeX 
+
+- Output: MSc thesis
+
+- Relevance: Conducting econometrically justifyable industry analysis, useful not only for economic research (policy evaluation of the Unitary Patent), but for business purposes as well (Unitary Patent characteristics, gaps in innovation, litigation outcomes likelihood). 
+
