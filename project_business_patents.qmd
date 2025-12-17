@@ -3,19 +3,19 @@ title: "2025-2026 - Business Intelligence report using Synthetic Patent Innovati
 ---
 
 ## Project at a glance
-- Project date: Fall 2025 - Spring 2026 (ongoing)
+- **Project date:** Fall 2025 - Spring 2026 (ongoing)
 
-- Key business questions: 
+- **Key business questions:**
 Where is innovation activity concentrated?
 How does collaboration evolve over time?
 Which technology areas grow fastest?
 How concentrated vs. fragmented is innovation?
 
-- Methodology: Synthetic data creation based on the PATSTAT database, translating relational databases into a comprehensive dataset and building insightful dashboards for relevant stakeholders to support business decisions.
+- **Methodology:** Synthetic data creation based on the PATSTAT database, translating relational databases into a comprehensive dataset and building insightful dashboards for relevant stakeholders to support business decisions.
 
-- Programs used: SQL (PATSTAT platform), Python, R, PowerBI, LaTeX
+- **Programs used:** SQL (PATSTAT platform), Python, R, PowerBI, LaTeX
 
-- Output: Insightful PowerBI dashboards, actionable recommendations on the proposed research questions.
+- **Output:** Insightful PowerBI dashboards, actionable recommendations on the proposed research questions.
 
 - Relevance: 
 

@@ -3,15 +3,25 @@ title: "BSc thesis (2022) - Webscraping and Sentiment Analysis"
 ---
 
 ## Project at a glance
-- Project date: Spring 2022 (grade: 8.5 out of 10)
+- **Project date:** Spring 2022 (grade: 8.5 out of 10)
 
-- Research question: How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?
+- **Research question:** How can high-frequency sentiment on twitter be used to predict the U.S. consumer sentiment index?
 
-- Methodology: Webscraping, data cleaning, sentiment analysis, standard econometric analysis
+- **Methodology:** Webscraping, data cleaning, sentiment analysis, standard econometric analysis
 
-- Programs used: Python, Stata
+- **Programs used:** Python, Stata
 
-- Output: A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants. 
+- **Output:** A dataframe containing daily, weekly and monthly twitter sentiment on macroeconomic topics such as inflation and unemployment, an econometric model regressing the U.S. consumer sentiment index on these predictors and lagged variants. 
 
-- Relevance: This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. I a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator).
+- **Relevance:** This thesis shows my interest in working with self-gathered big data, and transforming it into useful aggregates to be used for further analysis. In a world that is becoming more and more data-driven, I am not afraid to think out of the box in order to increase precision and efficiency of estimates (or in this case, obtain a real-time consumer sentiment estimate instead of a lagged survey indicator). 
 
+- **Key findings and limitation:** Despite earlier academic work suggesting predictive power of social media sentiment, this thesis does not find statistically significant effects when using daily Twitter sentiment to predict the U.S. consumer sentiment index. This highlights the sensitivity of results to data selection and aggregation methods, and underlines the challenges of extracting reliable macroeconomic signals from high-frequency, user-generated data.
+
+
+
+
+![Monthly Calculated Sentiment vs U.S. Consumer Sentiment Index.](images/project_BSc_thesis/monthly_sentiment_line.png)
+
+![Results table showing coefficients and significance of regressing monthly CSI on sentiment variables in two sentiment aggregation types.](images/project_BSc_thesis/result_table_significance.png)
+
+![Results table showing coefficients and significance of regressing monthly CSI on lagged sentiment variables in various ARDL models.](images/project_BSc_thesis/result_table_ARDL.png)

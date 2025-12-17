@@ -3,17 +3,17 @@ title: "MSc (2025) - Machine Learning for Business Analytics"
 ---
 
 ## Project at a glance
-- Project date: Spring 2025 (grade: 100/100 points)
+- **Project date:** Spring 2025 (grade: 100/100 points)
 
-- Research question: How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?
+- **Research question:** How do machine learning models help health insurance companies predict fraudulent insurance claims and what are the economic benefits of introducing such methods?
 
-- Methodology: feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.
+- **Methodology:** feature engineering, machine learning models (Random Forests, Gradient Boosting Models), hyperparameter search, threshold finetuning, cost sensitivity analysis.
 
-- Programs used: Python, LaTeX
+- **Programs used:** Python, LaTeX
 
-- Output: 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class' prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric. 
+- **Output:** 5 machine learning models, feature importance analysis (SHAP), cost-benefit simulations, firm-focused recommendations, condensed into a 15 pages long management-focused report. My most advanced model won the class' prediction competition, outscoring the other students by a minimum of 5% in the evaluation metric. 
 
-- Relevance: This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result.
+- **Relevance:** This projects showcases my skills in technical analysis and familiarity of working with advanced models to tackle business problems. Furthermore, it shows my method of analysis: evidence-based, creative, high-level, aware of uncertainties and assumptions, focused on a requested end result.
 
 # Scope
 This project was a part of my Business Analytics class during my MSc. Economics at the Wirtschaftsuniversität Wien. We were tasked with predicting fraudulent claims at a health insurance company, and making a business report showing our research, method results and firm recommendations on a claims processing overhaul as an end product. The assignment contained little prior information, other than a few aggregate business metrics of our firm vs the competitors, and a dataset of 100,000 claims. 
