@@ -4,14 +4,14 @@
     "href": "project_webscraping_UN.html",
     "title": "MSc (2025) - Webscraping and Text Mining",
     "section": "",
-    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+    "text": "Project date: Fall 2025 - Spring 2026\nResearch question: How do you detect threatening language in a diplomatic setting? Which countries’ representatives use threatening or coercive language in mentioning other countries, and how does this line up with geopolitical events?\nMethodology: Webscraping, text extraction from pdfs, text mining, topic modeling, zero shot classicification with customized entailment score modeling for threat detection\nPrograms used: R (rvest, chromote for webscraping and text mining with RegEx), Python (text extraction, topic modeling, zero shot classification), Github (version control in group settings)\nOutput: Aggregate statistics for coercive language use on country-level. Dataset of ~10500 mentions of countries in UN speeches and their adjacent sentences, scored on threatening, coercive and sanction-related language in the period 1990-2010.\nRelevance: I apply my knowledge of webscraping by finding a way to methodologically find data on UN speeches and automatically download the required speech notes. I then combine certain text-processing methods like RegEx rules, topic modeling with BERTopic and Zero Shot Classification (BART-facebook-mnli) for extracting and classifying text. This project highlights my familiarity with working with text data."
   },
   {
     "objectID": "project_webscraping_UN.html#project-at-a-glance",
     "href": "project_webscraping_UN.html#project-at-a-glance",
     "title": "MSc (2025) - Webscraping and Text Mining",
     "section": "",
-    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do public threats in a diplomatic setting influence later sanctions?\nMethodology: Webscraping, text extraction from pdfs, text mining, sentiment analysis, custom language analysis focused on threats\nPrograms used: R (rvest, chromote, regex), Python, LaTeX\nOutput: Dataframe with text of 2000 speeches given in the UN on the Russia-Ukraine conflict since 2014.\nRelevance: I apply my knowledge of webscraping by finding a way to methodolically find data on UN speeches and automatically download the required speech notes. I use RegEx code to filter relevant speech data out of big text data, allowing for further research applications."
+    "text": "Project date: Fall 2025 (ongoing)\nResearch question: How do you detect threatening language in diplomatic setting? Which countries’ representatives use threatening or coercive language in mentioning other countries, and how does this line up with geopolitical events?\nMethodology: Webscraping, text extraction from pdfs, text mining, topic modeling, zero shot classicification with customized entailment score modeling for threat detection\nPrograms used: R (rvest, chromote for webscraping and text mining with RegEx), Python (text extraction, topic modeling, zero shot classification), Github (version control in group settings)\nOutput: Aggregate statistics for coercive language use on country-level. Dataset of ~10500 mentions of countries in UN speeches and their adjacent sentences, scored on threatening, coercive and sanction-related language.\nRelevance: I apply my knowledge of webscraping by finding a way to methodologically find data on UN speeches and automatically download the required speech notes. I then combine certain text-processing methods like RegEx rules, topic modeling with BERTopic and Zero Shot Classification (BART-facebook-mnli) for extracting and classifying text. This project highlights my familiarity with working with text data."
   },
   {
     "objectID": "project_business_patents.html",
@@ -124,5 +124,61 @@
     "title": "MSc thesis (2025-2026) - Introduction of the Unitary Patent",
     "section": "",
     "text": "Project date: Fall 2025 - Spring 2026 (ongoing)\nResearch question: How is the introduction of the Unitary Patent shaping the patent industry, and do renewal and litigation outcomes between Unitary- and non-Unitary patents differ?\nMethodology: translating relational databases into a comprehensive dataset, using econometric methods such as matching to construct treatment and control groups and testing outcomes.\nPrograms used: SQL (PATSTAT platform), R, LaTeX\nOutput: MSc thesis\nRelevance: Conducting econometrically justifyable industry analysis, useful not only for economic research (policy evaluation of the Unitary Patent), but for business purposes as well (Unitary Patent characteristics, gaps in innovation, litigation outcomes likelihood)."
+  },
+  {
+    "objectID": "project_webscraping_UN.html#methodology---webscraping",
+    "href": "project_webscraping_UN.html#methodology---webscraping",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Methodology - Webscraping",
+    "text": "Methodology - Webscraping\n\nSpeech Record IDs The webscraping begins by extracting record IDs from the JSON endpoints of the UN’s digital library search page, looping over search pages by constructing links per country filter and per year. This was previously done with rvest directly from the search page, but the website was changed to load HTML in the back-end, which rendered rvest unuseable for this part. The output is a list of all revelant speech identifiers, each representing one speech made by one representative in a UN general member’s assembly meeting.\nSpeech Metadata We use the speech record IDs to construct new links, each leading to the speech’s information page. From this page, we extract the relevant metadata, including the speaker’s name, country that they represent, the date of the speech and importantly the meeting ID. This data is appended to the list of speeches, resulting in a metadata dataframe.\nPDF Downloading From the meeting ID, we build download links that automatically download each meeting pdf and save it in a folder. This results in 1045 pdfs from which the text can be extracted and coupled to one or more speeches."
+  },
+  {
+    "objectID": "project_webscraping_UN.html#methodology---text-extraction",
+    "href": "project_webscraping_UN.html#methodology---text-extraction",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Methodology - Text Extraction",
+    "text": "Methodology - Text Extraction\n\nMeeting text extraction from pdfs We use the python package PyMuPDF to extract text out of all the pdfs, and append each full meeting text to the relevant speech. While it may not have been the most efficient solution to append each full meeting to each speech, as there are often multiple speeches in a meeting, it was not a time-consuming enough processing task to make a more dynamic solution preferable.\nSpeech text extraction from meeting text We return to R and use RegEx code to extract the relevant part of a speaker’s speech out of the full meeting text. This is done by allowing for multiple patterns to start and end the text, which all involve the way the UN structures their speech notes, denoting the speakers name, optionally a text in brackets and then a colon. The pattern uses the relevant speaker’s name from the metadata and matches the following examples for a speaker called “Smith” among others:\n\n\nSmith:\nMr. Smith:\nJudge Smith (spoke in Spanish):\nDr. Smith (United Kingdom) (spoke in Japanese):\n\nWe additionally normalize diacritics in our pattern matching code, so that examples like García (official speaker name) and Garcia (in UN meeting notes) will still get matched.\nWe find that this kind of pattern recognition gives us the most success with extracting speeches, while minimizing the false positives which would give us non-relevant text.\n\nCountry mention extraction from speech text For each unique speech, we search for a mention of a country from a list of countries of the world, to extract mentions. We extract ~12000 mentions.\nContext window extraction For each mention, we take the two sentences around it, ending up with a context window. After deleting duplicates and non-relevant mentions (like lists of voting resolutions), we end up with ~10500 valid context windows."
+  },
+  {
+    "objectID": "project_webscraping_UN.html#methodology---analysis",
+    "href": "project_webscraping_UN.html#methodology---analysis",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Methodology - Analysis",
+    "text": "Methodology - Analysis\nFor an exploratory analysis, we use topic modeling, which can be user unsupervised or weakly supervised by encoding text data into vectors, reducing dimensionality and then clustering texts with similar language together into groups, and assigning topics on them based on common words in that cluster.\nWe use BERTopic and make it weakly supervised (deleting filler words and adding a suggested coercive language keyword group) on a keyword-based subset of context windows, after which it finds a topic on sanctions, security and threats for 64 out of 200+ windows. While this is a fun exploratory analysis, it does not mean that the windows in this topics are necessarily about sanctions, coercing or contain threats. They just share the same language.\n\n\n\nThe results of BERTopic in tabular form\n\n\nTo detect threatening language, we use Zero Shot Clasification. This method uses a pretrained large language model to score our relevant context windows on a number of labels that have to do with threatening language or not. The labels can be seen as hypotheses, as it asks the model for each context window: “Does this text entail {Label_Threat}” Where Label_Threat is: “issuing or endorsing a threat, deterrent warning, or conditional punishment” for example. The entailment score can be seen as a model’s relative confidence that the text entails the label. It is a score between 0 and 1, where a more threatening language would imply a higher score on the threat label, but possibly a lower score on a non-threat label like procedural or descriptive language.\nTo filter out false positives, we construct a narrow threat score which takes the threat score and subtracts the best contender out of the non-threat labels, to arrive at a new threat score. It then only keeps these threat scores if there is a conditional (if, when, else, etc.) and a consequence (relat…, consequence, then, etc.) present in the context window. We also construct a broader threat score that only takes a wider view of threatening language and filters out procedural language. These two scores are called threat_narrow and threat_broad in the final results."
+  },
+  {
+    "objectID": "project_webscraping_UN.html#results---mentions",
+    "href": "project_webscraping_UN.html#results---mentions",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Results - Mentions",
+    "text": "Results - Mentions\nThe top 20 mentioned countries in the United Nations are shown below, beside the mentions over time for a few highly mentioned countries. Since our dataset spans 1990-2010, we can relate the amount of mentions to geopolitical events that were subject to discussion in the UN General Member’s Assembly in this time period. This can explain the mentions of South Africa during the abolition of apartheid,\n\n\n\nTop 20 most mentioned countries\n\n\n\n\n\nTop mentioned countries over time"
+  },
+  {
+    "objectID": "project_webscraping_UN.html#results---threat-detection",
+    "href": "project_webscraping_UN.html#results---threat-detection",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Results - Threat Detection",
+    "text": "Results - Threat Detection\n\n\n\nEvolution of threat scores over time\n\n\n\n\n\nTop speakers by coercive intensity\n\n\n\n\n\nTop targets by coercive intensity\n\n\n\n\n\nSelected country dyads by relative coercive intensity"
+  },
+  {
+    "objectID": "project_webscraping_UN.html#limitations-and-suggestions-for-further-work",
+    "href": "project_webscraping_UN.html#limitations-and-suggestions-for-further-work",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Limitations and Suggestions for Further Work",
+    "text": "Limitations and Suggestions for Further Work"
+  },
+  {
+    "objectID": "project_webscraping_UN.html#workflow-setup",
+    "href": "project_webscraping_UN.html#workflow-setup",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Workflow setup",
+    "text": "Workflow setup\nThe diagram below visualizes our workflow. The code consists of two main files, from which all the other files that contain functions are run. Text extraction from pdfs and the analysis were best possible with python, which is why we opted for creating two main files, which build up on each other. All functions save data intermittently, so that progress can be stopped and started at command. This was needed, since runtimes for webscraping and threat analysis were very long. All data is saved under the data_files folder, and all code uses relative pathing to prevent any path conflicts when sharing code over github on different machines.\nSeminar_UN_Final/\n├─ scripts/\n│ ├─ Config.R\n│ ├─ Main_1_Data_Preparation.R\n│ ├─ 1_Webscraping_Function_1_RecordID.R\n│ ├─ 1_Webscraping_Function_2_Metadata.R\n│ ├─ 1_Webscraping_Function_3_PDFs.R\n│ ├─ 2_TextExtraction_Function_1_Text.py\n│ ├─ 2_TextExtraction_Function_1_Text.R\n│ ├─ 2_TextExtraction_Function_2_Speech.R\n│ ├─ 2_TextExtraction_Function_3_Mentions.R\n│ ├─ Main_2_Analysis.py\n│ ├─ Analysis_3_Function_2_BERT.py\n│ ├─ Analysis_3_Function_3_Threat_Streaming.py\n│ └─ Analysis_3_Function_4_ThreatViz.py\n│\n├─ data_files/\n│ ├─ pdfs/ …\n│ ├─ un_pdf_text.csv\n│ ├─ un_speech_level_data.parquet\n│ ├─ country_windows_sentences.parquet\n│ └─ threat_data_dataset/ …\n│\n└─ output/\n└─ threat_viz/ …"
+  },
+  {
+    "objectID": "project_webscraping_UN.html#selected-narrow-threats",
+    "href": "project_webscraping_UN.html#selected-narrow-threats",
+    "title": "MSc (2025) - Webscraping and Text Mining",
+    "section": "Selected Narrow Threats",
+    "text": "Selected Narrow Threats"
   }
 ]

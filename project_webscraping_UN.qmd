@@ -2,16 +2,16 @@
 title: "MSc (2025) - Webscraping and Text Mining"
 ---
 
-## Project at a glance
-- **Project date:** Fall 2025 (ongoing)
+# Project at a glance
+- **Project date:** Fall 2025 - Spring 2026
 
-- **Research question:** How do you detect threatening language in diplomatic setting? Which countries' representatives use threatening or coercive language in mentioning other countries, and how does this line up with geopolitical events?
+- **Research question:** How do you detect threatening language in a diplomatic setting? Which countries' representatives use threatening or coercive language in mentioning other countries, and how does this line up with geopolitical events?
 
 - **Methodology:** Webscraping, text extraction from pdfs, text mining, topic modeling, zero shot classicification with customized entailment score modeling for threat detection
 
 - **Programs used:** **R** (rvest, chromote for webscraping and text mining with **RegEx**), **Python** (text extraction, topic modeling, zero shot classification), **Github** (version control in group settings)
 
-- **Output:** Aggregate statistics for coercive language use on country-level. Dataset of ~10500 mentions of countries in UN speeches and their adjacent sentences, scored on threatening, coercive and sanction-related language.
+- **Output:** Aggregate statistics for coercive language use on country-level. Dataset of ~10500 mentions of countries and the sentences around them, scored on threatening, coercive and sanction-related language from 600 UN speeches per year in the period 1990-2010. 
 
 - **Relevance:** I apply my knowledge of webscraping by finding a way to methodologically find data on UN speeches and automatically download the required speech notes. I then combine certain text-processing methods like RegEx rules, topic modeling with BERTopic and Zero Shot Classification (BART-facebook-mnli) for extracting and classifying text. This project highlights my familiarity with working with text data. 
 
@@ -19,7 +19,7 @@ title: "MSc (2025) - Webscraping and Text Mining"
 This project is a part of the research & policy seminar in Data Science and Machine Learning, where we were given free choice in project topics. Our group of three chose UN data because it grants us an opportunity to make a structural, informative dataset out of webscraped data. By using advance data science methods, we show how there is still opportunity to create useful data in an already data-driven world to fill research gaps. 
 
 
-# Methodology - Webscraping
+## Methodology - Webscraping
 1. Speech Record IDs
 The webscraping begins by extracting record IDs from the JSON endpoints of the UN's digital library search page, looping over search pages by constructing links per country filter and per year. This was previously done with rvest directly from the search page, but the website was changed to load HTML in the back-end, which rendered rvest unuseable for this part. The output is a list of all revelant speech identifiers, each representing one speech made by one representative in a UN general member's assembly meeting.
 
@@ -30,8 +30,7 @@ We use the speech record IDs to construct new links, each leading to the speech'
 From the meeting ID, we build download links that automatically download each meeting pdf and save it in a folder. This results in 1045 pdfs from which the text can be extracted and coupled to one or more speeches.
 
 
-
-# Methodology - Text Extraction
+## Methodology - Text Extraction
 1. Meeting text extraction from pdfs
 We use the python package PyMuPDF to extract text out of all the pdfs, and append each full meeting text to the relevant speech. While it may not have been the most efficient solution to append each full meeting to each speech, as there are often multiple speeches in a meeting, it was not a time-consuming enough processing task to make a more dynamic solution preferable. 
 
@@ -53,44 +52,99 @@ For each unique speech, we search for a mention of a country from a list of coun
 For each mention, we take the two sentences around it, ending up with a context window. After deleting duplicates and non-relevant mentions (like lists of voting resolutions), we end up with ~10500 valid context windows.
 
 
-# Methodology - Analysis
+## Methodology - Analysis
 For an exploratory analysis, we use topic modeling, which can be user unsupervised or weakly supervised by encoding text data into vectors, reducing dimensionality and then clustering texts with similar language together into groups, and assigning topics on them based on common words in that cluster.
 
 We use BERTopic and make it weakly supervised (deleting filler words and adding a suggested coercive language keyword group) on a keyword-based subset of context windows, after which it finds a topic on sanctions, security and threats for 64 out of 200+ windows. While this is a fun exploratory analysis, it does not mean that the windows in this topics are necessarily about sanctions, coercing or contain threats. They just share the same language.
 
+![The results of BERTopic in tabular form](images/project_webscraping_UN/BERTopic_results.jpeg)
+
+
 To detect threatening language, we use Zero Shot Clasification. This method uses a pretrained large language model to score our relevant context windows on a number of labels that have to do with threatening language or not. The labels can be seen as hypotheses, as it asks the model for each context window: "Does this text entail {Label_Threat}" Where Label_Threat is: "issuing or endorsing a threat, deterrent warning, or conditional punishment" for example. The entailment score can be seen as a model's relative confidence that the text entails the label. It is a score between 0 and 1, where a more threatening language would imply a higher score on the threat label, but possibly a lower score on a non-threat label like procedural or descriptive language. 
 
-To filter out false positives, we construct a narrow threat score which takes the threat score and subtracts the best contender out of the non-threat labels, to arrive at a new threat score. It then only keeps these threat scores if there is a conditional (if, when, else, etc.) and a consequence (relat..., consequence, then, etc.) present in the context window. We also construct a broader threat score that only takes a wider view of threatening language and filters out procedural language. 
+To filter out false positives, we construct a narrow threat score which takes the threat score and subtracts the best contender out of the non-threat labels, to arrive at a new threat score. It then only keeps these threat scores if there is a conditional (if, when, else, etc.) and a consequence (relat..., consequence, then, etc.) present in the context window. We also construct a broader threat score that only takes a wider view of threatening language and filters out procedural language. These two scores are called threat_narrow and threat_broad in the final results.
 
-# Results 
+## Results - Mentions
+The top 20 mentioned countries in the United Nations are shown below, beside the mentions over time for a few highly mentioned countries. Since our dataset spans 1990-2010, we can relate the amount of mentions to geopolitical events that were subject to discussion in the UN General Member's Assembly in this time period. This can explain the mentions of South Africa during the abolition of apartheid and Iraq between 2000 and 2003 during bombing and the US invasion. 
+
+Please keep in mind that this aggregate total only consist of 600 UN speeches per year, of which some were and were not able to be scraped, downloaded or extracted, leaving only a subset of all total mentions.
+
+![Top 20 most mentioned countries](images/project_webscraping_UN/barchart_top20_mentions.png)
+
+![Top mentioned countries over time](images/project_webscraping_UN/mentions_over_time.png)
 
 
+## Results - Threat Detection
+The first graph gives an overview of how our narrow and broad threats evolve over time in aggregate. As expected, the narrow threat score filters out more context windows, being a magnitude smaller than the mean broad threat score. This is expected, as generic and direct threats are decidedly rare in diplomatic settings.
 
-# Workflow setup
+![Evolution of threat scores over time](images/project_webscraping_UN/threat_scores_over_time.png)
+
+
+The next graphs show the top 20 speakers and targets by and of coercive language. While some results may make sense in a geopolitical sense, such as North Korea being the biggest target, or Turkey and Cyprus being close to each other as their conflict was subject to discussion in this timeframe, the data is still generally noisy. 
+
+![Top speakers by coercive intensity](images/project_webscraping_UN/top_speakers_coercive_intensity.png)
+
+![Top targets by coercive intensity](images/project_webscraping_UN/top_targets_coercive_intensity.png)
+
+We also select country dyads where one country uses decisively more threatening/coercive language to one target, relative to their average language. Some interesting results emerge from this, such as Cuba and North Korea to the United States, or Palestine towards Israel. One of the biggest coercive intensity dyads we observe is the United States towards Israel. While this may seem counterintuitive given today's relationship, the regional instability in the middle east in our timeframe makes it plausible that the US used slight coercive language in order to convince Israel to negotiate and stabilize the region. However, this is likely just a noisy result - the model may have picked up on threatening language to any state that attacked Israel instead, and framed it as a threat towards Israel.
+
+![Selected country dyads by relative coercive intensity](images/project_webscraping_UN/selected_country_dyads.png)
+
+## Selected Narrow Threats
+
+
+## Limitations and Suggestions for Further Work
+
+
+## Workflow setup
 The diagram below visualizes our workflow. The code consists of two main files, from which all the other files that contain functions are run. Text extraction from pdfs and the analysis were best possible with python, which is why we opted for creating two main files, which build up on each other. All functions save data intermittently, so that progress can be stopped and started at command. This was needed, since runtimes for webscraping and threat analysis were very long. All data is saved under the data_files folder, and all code uses relative pathing to prevent any path conflicts when sharing code over github on different machines.
 
 Seminar_UN_Final/
+
 ├─ scripts/
+
 │  ├─ Config.R
+
 │  ├─ Main_1_Data_Preparation.R
+
 │  ├─ 1_Webscraping_Function_1_RecordID.R
+
 │  ├─ 1_Webscraping_Function_2_Metadata.R
+
 │  ├─ 1_Webscraping_Function_3_PDFs.R
+
 │  ├─ 2_TextExtraction_Function_1_Text.py
+
 │  ├─ 2_TextExtraction_Function_1_Text.R
+
 │  ├─ 2_TextExtraction_Function_2_Speech.R
+
 │  ├─ 2_TextExtraction_Function_3_Mentions.R
+
 │  ├─ Main_2_Analysis.py
+
 │  ├─ Analysis_3_Function_2_BERT.py
+
 │  ├─ Analysis_3_Function_3_Threat_Streaming.py
+
 │  └─ Analysis_3_Function_4_ThreatViz.py
+
 │
+
 ├─ data_files/
+
 │  ├─ pdfs/ ...
+
 │  ├─ un_pdf_text.csv
+
 │  ├─ un_speech_level_data.parquet
+
 │  ├─ country_windows_sentences.parquet
+
 │  └─ threat_data_dataset/ ...
+
 │
+
 └─ output/
+
    └─ threat_viz/ ...
