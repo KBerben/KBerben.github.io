@@ -26,19 +26,23 @@
     color: #000;
 }
 
+/* Portfolio dropdown (details/summary) styling */
 details.portfolio-toggle > summary {
-  font-size: 1.15rem;   /* make it bigger */
-  font-weight: 700;     /* bold */
-  color: #000;          /* black */
+  font-size: 1.5rem;              
+  font-weight: 600;             
+  color: #4a4a4a;              
   cursor: pointer;
-  margin: 0.75rem 0;
+  margin: 0.75rem 0 0.5rem 0;
 }
 
-details.portfolio-toggle > summary strong {
-  font-weight: inherit; /* avoid double-bold weirdness */
+details.portfolio-toggle > summary::marker {
+  font-size: 0.9rem;
 }
 
-/* Optional: make the content slightly indented */
+details.portfolio-toggle > summary:hover {
+  color: #2f2f2f;                
+}
+
 details.portfolio-toggle > *:not(summary) {
   margin-left: 0.25rem;
 }

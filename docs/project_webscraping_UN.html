@@ -169,9 +169,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Output:</strong> Aggregate statistics for coercive language use on country-level. Dataset of ~10500 mentions of countries and the sentences around them, scored on threatening, coercive and sanction-related language from up to 500 speeches per country-year in the period 1990-2010, subject to platform constraints.</p></li>
 <li><p><strong>Relevance:</strong> I apply my knowledge of webscraping by finding a way to methodologically find data on UN speeches and automatically download the required speech notes. I then combine certain text-processing methods like RegEx rules, topic modeling with BERTopic and Zero Shot Classification (BART-facebook-mnli) for extracting and classifying text. This project highlights my familiarity with working with text data.</p></li>
 </ul>
-</section>
-<section id="scope" class="level1">
-<h1>Scope</h1>
+<section id="scope" class="level2">
+<h2 class="anchored" data-anchor-id="scope">Scope</h2>
 <p>This project is a part of the research &amp; policy seminar in Data Science and Machine Learning, where we were given free choice in project topics. Our group of three chose UN data because it grants us an opportunity to make a structural, informative dataset out of webscraped data. By using advance data science methods, we show how there is still opportunity to create useful data in an already data-driven world to fill research gaps.</p>
 <details class="portfolio-toggle">
 <summary>
@@ -187,8 +186,6 @@ ul.task-list li input[type="checkbox"] {
 <summary>
 <strong>Methodology - Text Extraction</strong>
 </summary>
-<section id="methodology---text-extraction" class="level2">
-<h2 class="anchored" data-anchor-id="methodology---text-extraction">Methodology - Text Extraction</h2>
 <ol type="1">
 <li><p>Meeting text extraction from pdfs We use the python package PyMuPDF to extract text out of all the pdfs, and append each full meeting text to the relevant speech. While it may not have been the most efficient solution to append each full meeting to each speech, as there are often multiple speeches in a meeting, it was not a time-consuming enough processing task to make a more dynamic solution preferable.</p></li>
 <li><p>Speech text extraction from meeting text We return to R and use RegEx code to extract the relevant part of a speaker’s speech out of the full meeting text. This is done by allowing for multiple patterns to start and end the text, which all involve the way the UN structures their speech notes, denoting the speakers name, optionally a text in brackets and then a colon. The pattern uses the relevant speaker’s name from the metadata and matches the following examples for a speaker called “Smith” among others:</p></li>
@@ -205,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Country mention extraction from speech text For each unique speech, we search for a mention of a country from a list of countries of the world, to extract mentions. We extract ~12000 mentions.</p></li>
 <li><p>Context window extraction For each mention, we take the two sentences around it, ending up with a context window. After deleting duplicates and non-relevant mentions (like lists of voting resolutions), we end up with ~10500 valid context windows.</p></li>
 </ol>
-</section></details>
+</details>
 <details class="portfolio-toggle">
 <summary>
 <strong>Methodology - Analysis</strong>
@@ -268,14 +265,16 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Selected country dyads by relative coercive intensity</figcaption>
 </figure>
 </div>
-</section>
-<section id="selected-narrow-threats" class="level2">
-<h2 class="anchored" data-anchor-id="selected-narrow-threats">Selected Narrow Threats</h2>
+<details class="portfolio-toggle">
+<summary>
+<strong>Selected Narrow Threats</strong>
+</summary>
 <p>The following are 4 hand-picked examples on our narrow-threat indicator. While even in the narrow threat data there are non-threat texts, these sprung out as either threats or vaguely coercive use of language that our model picked up on. Even when faced with the windows of text below, defining these as threats or not is not an easy task. The texts are heavily context-dependent, the language used is very diplomatic, where persuasion is framed in a positive way. The words are chosen carefully and not an expression of sudden emotion or sentiment.</p>
 <p><strong>Nepal to South Africa (textbook threat)</strong> “The South African people <strong>cannot remain under the cruelty of apartheid any longer</strong>. The international community, therefore, must continue to support the objectives and goals of the 1989 consensus Declaration, and lend political and moral support to the oppressed people of South Africa in their just struggle for liberation from apartheid oppression. At a time when the process towards dismantling apartheid through negotiations has reached a new and critical stage, <strong>it is extremely important to continue to impose economic sanctions and a mandatory arms embargo</strong> on the minority Pretoria regime as a means of <strong>ensuring a speedy end to apartheid.</strong>”</p>
 <p><strong>Mali to Rwanda (less clean, impossible to know if threatening without further context)</strong> The tragedy of Rwanda, which does dishonour to the human race, <strong>demands</strong> for that reason that the international community seek a way to <strong>implement solutions to ensure</strong> that that country shall achieve <strong>harmonious and definitive inter-ethnic coexistence.</strong> Hence, Mali, which has a <strong>military contingent</strong> in Rwanda, suggests that Rwanda should receive substantial assistance from the international community.</p>
 <p><strong>Sudan on U.S. (very broad, no consequence stated)</strong> Yet this interest of ours must be met with an objective response by the other party. Hence, we call upon the United Nations and peace-loving countries to <strong>urge the United States Administration</strong> to take positive steps towards the <strong>normalization of relations</strong> with the Sudan and to <strong>desist from interference in its internal affairs,</strong> which only results in prolonging the civil war and death and suffering for the Sudanese people. 31 General Assembly 19th plenary meeting Fifty-fourth session 30 September 1999 The Sudan believes that the United States, as a great Power concerned with world and regional peace, could play an important role in the settlement of the Sudan’s problems.</p>
-<p><strong>Egypt on Israel (implicit language, framed positively)</strong> <strong>If allowed to continue, it will only lead to</strong> the proliferation of weapons of mass destruction in the region and could well carry the seeds of a <strong>regional arms race, with all its grave consequences.</strong> In this context, I wish to recall that last week the representative of Israel stated before the First Committee that Israel supports the principle of non-proliferation, recalling his country’s vote in favour of the NPT in 1968 and its support for the indefinite extension of the Treaty. My delegation welcomes Israel’s support for the principle of non-proliferation.</p>
+<strong>Egypt on Israel (implicit language, framed positively)</strong> <strong>If allowed to continue, it will only lead to</strong> the proliferation of weapons of mass destruction in the region and could well carry the seeds of a <strong>regional arms race, with all its grave consequences.</strong> In this context, I wish to recall that last week the representative of Israel stated before the First Committee that Israel supports the principle of non-proliferation, recalling his country’s vote in favour of the NPT in 1968 and its support for the indefinite extension of the Treaty. My delegation welcomes Israel’s support for the principle of non-proliferation.
+</details>
 <details class="portfolio-toggle">
 <summary>
 <strong>Limitations and Suggestions for Further Work</strong>
@@ -329,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section>
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

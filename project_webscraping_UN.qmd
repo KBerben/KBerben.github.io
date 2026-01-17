@@ -15,7 +15,7 @@ title: "MSc (2025) - Webscraping and Text Mining"
 
 - **Relevance:** I apply my knowledge of webscraping by finding a way to methodologically find data on UN speeches and automatically download the required speech notes. I then combine certain text-processing methods like RegEx rules, topic modeling with BERTopic and Zero Shot Classification (BART-facebook-mnli) for extracting and classifying text. This project highlights my familiarity with working with text data. 
 
-# Scope
+## Scope
 This project is a part of the research & policy seminar in Data Science and Machine Learning, where we were given free choice in project topics. Our group of three chose UN data because it grants us an opportunity to make a structural, informative dataset out of webscraped data. By using advance data science methods, we show how there is still opportunity to create useful data in an already data-driven world to fill research gaps. 
 
 <details class="portfolio-toggle"> 
@@ -33,7 +33,6 @@ From the meeting ID, we build download links that automatically download each me
 
 <details class="portfolio-toggle"> 
 <summary><strong>Methodology - Text Extraction</strong></summary>
-## Methodology - Text Extraction
 1. Meeting text extraction from pdfs
 We use the python package PyMuPDF to extract text out of all the pdfs, and append each full meeting text to the relevant speech. While it may not have been the most efficient solution to append each full meeting to each speech, as there are often multiple speeches in a meeting, it was not a time-consuming enough processing task to make a more dynamic solution preferable. 
 
@@ -99,7 +98,8 @@ We also select country dyads where one country uses decisively more threatening/
 
 ![Selected country dyads by relative coercive intensity](images/project_webscraping_UN/selected_country_dyads.png)
 
-## Selected Narrow Threats
+<details class="portfolio-toggle"> 
+<summary><strong>Selected Narrow Threats</strong></summary>
 The following are 4 hand-picked examples on our narrow-threat indicator. While even in the narrow threat data there are non-threat texts, these sprung out as either threats or vaguely coercive use of language that our model picked up on. Even when faced with the windows of text below, defining these as threats or not is not an easy task. The texts are heavily context-dependent, the language used is very diplomatic, where persuasion is framed in a positive way. The words are chosen carefully and not an expression of sudden emotion or sentiment. 
 
 **Nepal to South Africa (textbook threat)**
@@ -113,6 +113,7 @@ Yet this interest of ours must be met with an objective response by the other pa
 
 **Egypt on Israel (implicit language, framed positively)**
 **If allowed to continue, it will only lead to** the proliferation of weapons of mass destruction in the region and could well carry the seeds of a **regional arms race, with all its grave consequences.** In this context, I wish to recall that last week the representative of Israel stated before the First Committee that Israel supports the principle of non-proliferation, recalling his country's vote in favour of the NPT in 1968 and its support for the indefinite extension of the Treaty. My delegation welcomes Israel's support for the principle of non-proliferation.
+</details>
 
 <details class="portfolio-toggle"> 
 <summary><strong>Limitations and Suggestions for Further Work</strong></summary>
