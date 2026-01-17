@@ -25,3 +25,20 @@
 .dropdown-text {
     color: #000;
 }
+
+details.portfolio-toggle > summary {
+  font-size: 1.15rem;   /* make it bigger */
+  font-weight: 700;     /* bold */
+  color: #000;          /* black */
+  cursor: pointer;
+  margin: 0.75rem 0;
+}
+
+details.portfolio-toggle > summary strong {
+  font-weight: inherit; /* avoid double-bold weirdness */
+}
+
+/* Optional: make the content slightly indented */
+details.portfolio-toggle > *:not(summary) {
+  margin-left: 0.25rem;
+}
