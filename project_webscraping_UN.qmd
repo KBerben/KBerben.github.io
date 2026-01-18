@@ -7,7 +7,7 @@ title: "MSc (2025) - Webscraping and Text Mining"
 
 - **Research question:** How do you detect threatening language in a diplomatic setting? Which countries' representatives use threatening or coercive language in mentioning other countries, and how does this line up with geopolitical events?
 
-- **Methodology:** Webscraping, text extraction from pdfs, text mining, topic modeling, zero shot classicification with customized entailment score modeling for threat detection
+- **Methodology:** Webscraping, text extraction from pdfs, text mining, topic modeling, zero shot classification with customized entailment score modeling for threat detection
 
 - **Programs used:** **R** (rvest, chromote for webscraping and text mining with **RegEx**), **Python** (text extraction, topic modeling, zero shot classification), **Github** (version control in group settings)
 
@@ -21,7 +21,7 @@ This project is a part of the research & policy seminar in Data Science and Mach
 <details class="portfolio-toggle"> 
 <summary><strong>Methodology - Webscraping</strong></summary>
 1. Speech Record IDs
-The webscraping begins by extracting record IDs from the JSON endpoints of the UN's digital library search page, looping over search pages by constructing links per country filter and per year. This was previously done with rvest directly from the search page, but the website was changed to load HTML in the back-end, which rendered rvest unuseable for this part. The output is a list of all revelant speech identifiers, each representing one speech made by one representative in a UN general member's assembly meeting.
+The webscraping begins by extracting record IDs from the JSON endpoints of the UN's digital library search page, looping over search pages by constructing links per country filter and per year. This was previously done with rvest directly from the search page, but the website was changed to load HTML in the back-end, which rendered rvest unuseable for this part. The output is a list of all revelant speech identifiers, each representing one speech made by one representative in a UN General Assembly meeting.
 
 2. Speech Metadata
 We use the speech record IDs to construct new links, each leading to the speech's information page. From this page, we extract the relevant metadata, including the speaker's name, country that they represent, the date of the speech and importantly the meeting ID. This data is appended to the list of speeches, resulting in a metadata dataframe.
@@ -66,16 +66,16 @@ We use BERTopic and make it weakly supervised (deleting filler words and adding 
 ![The results of BERTopic in tabular form](images/project_webscraping_UN/BERTopic_results.jpeg)
 
 
-To detect threatening language, we use Zero Shot Clasification. This method uses a pretrained large language model to score our relevant context windows on a number of labels that have to do with threatening language or not. The labels can be seen as hypotheses, as it asks the model for each context window: "Does this text entail {Label_Threat}" Where Label_Threat is: "issuing or endorsing a threat, deterrent warning, or conditional punishment" for example. The entailment score can be seen as a model's relative confidence that the text entails the label. It is a score between 0 and 1, where a more threatening language would imply a higher score on the threat label, but possibly a lower score on a non-threat label like procedural or descriptive language. 
+To detect threatening language, we use Zero Shot Classification. This method uses a pretrained large language model to score our relevant context windows on a number of labels that have to do with threatening language or not. The labels can be seen as hypotheses, as it asks the model for each context window: "Does this text entail {Label_Threat}" Where Label_Threat is: "issuing or endorsing a threat, deterrent warning, or conditional punishment" for example. The entailment score can be seen as a model's relative confidence that the text entails the label. It is a score between 0 and 1, where a more threatening language would imply a higher score on the threat label, but possibly a lower score on a non-threat label like procedural or descriptive language. 
 
 To filter out false positives, we construct a narrow threat score which takes the threat score and subtracts the best contender out of the non-threat labels, to arrive at a new threat score. It then only keeps these threat scores if there is a conditional (if, when, else, etc.) and a consequence (relat..., consequence, then, etc.) present in the context window. We also construct a broader threat score that only takes a wider view of threatening language and filters out procedural language. These two scores are called threat_narrow and threat_broad in the final results.
 
 </details>
 
 ## Results - Mentions
-The top 20 mentioned countries in the United Nations are shown below, beside the mentions over time for a few highly mentioned countries. Since our dataset spans 1990-2010, we can relate the amount of mentions to geopolitical events that were subject to discussion in the UN General Member's Assembly in this time period. This can explain the mentions of South Africa during the abolition of apartheid and Iraq between 2000 and 2003 during bombing and the US invasion. 
+The top 20 mentioned countries in the United Nations are shown below, beside the mentions over time for a few highly mentioned countries. Since our dataset spans 1990-2010, we can relate the amount of mentions to geopolitical events that were subject to discussion in the UN General Assembly in this time period. This can explain the mentions of South Africa during the abolition of apartheid and Iraq between 2000 and 2003 during bombing and the US invasion. 
 
-Please keep in mind that this aggregate total only consist of 600 UN speeches per year, of which some were and were not able to be scraped, downloaded or extracted, leaving only a subset of all total mentions.
+Please keep in mind that this aggregate total only consist of 500 UN speeches per year, of which some were and were not able to be scraped, downloaded or extracted, leaving only a subset of all total mentions.
 
 ![Top 20 most mentioned countries](images/project_webscraping_UN/barchart_top20_mentions.png)
 
@@ -102,16 +102,22 @@ We also select country dyads where one country uses decisively more threatening/
 <summary><strong>Selected Narrow Threats</strong></summary>
 The following are 4 hand-picked examples on our narrow-threat indicator. While even in the narrow threat data there are non-threat texts, these sprung out as either threats or vaguely coercive use of language that our model picked up on. Even when faced with the windows of text below, defining these as threats or not is not an easy task. The texts are heavily context-dependent, the language used is very diplomatic, where persuasion is framed in a positive way. The words are chosen carefully and not an expression of sudden emotion or sentiment. 
 
+
 **Nepal to South Africa (textbook threat)**
+
 "The South African people **cannot remain under the cruelty of apartheid any longer**. The international community, therefore, must continue to support the objectives and goals of the 1989 consensus Declaration, and lend political and moral support to the oppressed people of South Africa in their just struggle for liberation from apartheid oppression. At a time when the process towards dismantling apartheid through negotiations has reached a new and critical stage, **it is extremely important to continue to impose economic sanctions and a mandatory arms embargo** on the minority Pretoria regime as a means of **ensuring a speedy end to apartheid.**"
 
+
 **Mali to Rwanda (less clean, impossible to know if threatening without further context)**
+
 The tragedy of Rwanda, which does dishonour to the human race, **demands** for that reason that the international community seek a way to **implement solutions to ensure** that that country shall achieve **harmonious and definitive inter-ethnic coexistence.** Hence, Mali, which has a **military contingent** in Rwanda, suggests that Rwanda should receive substantial assistance from the international community. 
 
 **Sudan on U.S. (very broad, no consequence stated)**
+
 Yet this interest of ours must be met with an objective response by the other party. Hence, we call upon the United Nations and peace-loving countries to **urge the United States Administration** to take positive steps towards the **normalization of relations** with the Sudan and to **desist from interference in its internal affairs,** which only results in prolonging the civil war and death and suffering for the Sudanese people. 31 General Assembly 19th plenary meeting Fifty-fourth session 30 September 1999 The Sudan believes that the United States, as a great Power concerned with world and regional peace, could play an important role in the settlement of the Sudan's problems.
 
 **Egypt on Israel (implicit language, framed positively)**
+
 **If allowed to continue, it will only lead to** the proliferation of weapons of mass destruction in the region and could well carry the seeds of a **regional arms race, with all its grave consequences.** In this context, I wish to recall that last week the representative of Israel stated before the First Committee that Israel supports the principle of non-proliferation, recalling his country's vote in favour of the NPT in 1968 and its support for the indefinite extension of the Treaty. My delegation welcomes Israel's support for the principle of non-proliferation.
 </details>
 
