@@ -1,5 +1,5 @@
 ---
-title: "MSc (2025) - Webscraping and Text Mining"
+title: "MSc (2025) - Identifying Geopolitical Threat Signals in UN Speeches Using NLP"
 ---
 
 # Project at a glance
