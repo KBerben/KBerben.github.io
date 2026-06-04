@@ -2,10 +2,18 @@
 title: "About Me"
 ---
 
+I am a graduate economics student with a background in accounting, finance, business analytics, programming, and policy/research evaluation. I enjoy working with data in both business and economic settings, especially when technical analysis can be translated into practical insights.
 
-I am a graduate economics student with a background in accounting, finance, business analytics, programming and policy/research evaluation. I enjoy working with data, whether it is scraping, cleaning, visualizating, applying machine learning methods or standard econometric analysis. Applying data, evidence-based assumptions and dilligent analysis to find targeted business solutions is one of my core strengths. 
+For the past two years, I have lived in Vienna, Austria, where I am pursuing my master’s degree in Economics at the Wirtschaftsuniversität Wien. Before moving to Austria, I lived in the Netherlands, where I completed my bachelor’s degree in Economics and Business Economics at Erasmus University Rotterdam and worked as an Assistant Controller at Arnold & Siedsma, a Dutch patent and law firm.
 
-Feel free to look through some of my previous projects and contact me if you have any questions. 
+I have experience with a wide variety of data-related tasks, including web scraping, data cleaning, data visualization, machine learning, and microeconometric analysis in R and Python. At the same time, I also have experience with more traditional business analytics tasks, such as forecasting, budgeting, financial analysis, and working with Excel, Power BI, and SQL for database information extraction. Ideally, I would like to combine my technical skills with my business and economics background to work on projects that have a real-world impact.
+
+I am a quick learner and always eager to develop new skills and techniques to improve my data analysis capabilities. I also value clear communication and enjoy presenting findings to both technical and non-technical audiences.
+
+In my free time, I enjoy running, biking, and the occasional swim. Sometimes, you can find me working on a new data project, but I also enjoy reading an exciting book or watching a good series.
+
+Feel free to look through some of my previous projects, and contact me if you have any questions.
+
 
 
 ![](images/Photo_Koen.jpg){width=40%}

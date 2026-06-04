@@ -33,7 +33,7 @@ format:
 
 I am an analytical and technically skilled economics graduate approach everything with reason and a problem-solving perspective. With practical knowledge of businesses and organizations, I am able to apply my knowledge in theoretical discussions and translate ideas into practical applications.
 
-As a triathlete outside of my career, I bring my discipline, perseverance, and positive mindset to both work and study.
+As an endurance athlete outside of my career, I bring my discipline, perseverance, and positive mindset to both work and study.
 
 ---
 
@@ -42,26 +42,26 @@ As a triathlete outside of my career, I bring my discipline, perseverance, and p
 **Vienna University of Economics and Business Economics (MSc)**  
 Master Economics  
 2024 – now  
-Grade: 1.2  (Austrian grading system)
+Grade: 1.14  (Austrian grading system, where 1 is the best score. I am currently ranked 6th out of 96 students)
 
 **Erasmus Universiteit Rotterdam (BSc)**  
 Bachelor Economics & Business Economics  
 2019 – 2022  
 Grade: 8.1 (Dutch grading system)
+Major: Financial Economics (Corporate Finance & Entrepeneurial Finance)
 
 ---
 
 ## Skills
-
-- Proficient in statistical programs including Stata, R, and SPSS for data manipulation, analysis and econometrics.
-- Practical experience with Python (web scraping, data cleaning, data analytics, and machine learning models).
-- Practical programming knowledge in diverse languages such as HTML, CSS, RMarkdown, LaTeX.
-- Familiar with OCR workflows in combination with RegEx rules.
-- Functional knowledge of SQL and Power BI for (financial and management) reporting.
-- Curricular knowledge in accounting, microeconomics, macroeconomics, marketing, finance, econometrics, and game theory.
-- Practical understanding of accounting and management through work experience.
+- Proficient in data analysis and econometrics using Stata, R, and SPSS.
+- Practical experience with Python for web scraping, data cleaning, data analysis, and machine learning.
+- Experience with SQL, Power BI, and Excel for financial, management, and business reporting.
+- Familiar with OCR workflows, RegEx, and structured data extraction from unstructured sources.
+- Practical knowledge of HTML, CSS, RMarkdown, and LaTeX for reporting, documentation, and basic web development.
+- Academic background in accounting, microeconomics, macroeconomics, marketing, finance, econometrics, and game theory.
+- Practical understanding of accounting, management reporting, and process improvement through work experience.
 - Strong skills in Microsoft Excel, Word, PowerPoint, and Power BI.
-- Fluent proficiency in Dutch and English, including possession of a Cambridge Advanced English (CAE) diploma, certified B1 German.
+- Fluent in Dutch and English, including a Cambridge Advanced English diploma. Basic level of German.
 
 ## Work Experience
 
