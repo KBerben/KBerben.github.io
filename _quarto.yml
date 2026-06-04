@@ -18,9 +18,7 @@ website:
           - href: project_threat_detection_UN_speeches.qmd
             text: MSc (2025) - Identifying Geopolitical Threat Signals in UN Speeches Using NLP
           - href: project_MSc_thesis.qmd
-            text: MSc thesis (2025/2026) - Introduction of the Unitary Patent
-          - href: project_business_patents.qmd
-            text: (2025/2026) - Business Intelligence report using Synthetic Patent Innovation Data
+            text: MSc thesis (2025/2026) - Introduction of the Unitary Patent System
             
   page-footer:
     left: "© 2025 Koen Berben"
